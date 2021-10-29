@@ -1,0 +1,59 @@
+{
+  "name": "cli-react",
+  "version": "1.0.0",
+  "repository": "https://www.github.com/wisehackermonkey/cli-react",
+  "author": "wisehackermonkey",
+  "license": "MIT",
+  "private": false,
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "xo && ava",
+    "build": "babel ./cli.js -o cli.js",
+    "start": "node cli"
+  },
+  "files": [
+    "cli.js",
+    "ui.js"
+  ],
+  "dependencies": {
+    "import-jsx": "^4.0.0",
+    "ink": "^3.2.0",
+    "meow": "^9.0.0",
+    "react": "^17.0.2"
+  },
+  "ava": {
+    "babel": true,
+    "require": [
+      "@babel/register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "xo": {
+    "extends": "xo-react",
+    "rules": {
+      "react/prop-types": "off"
+    }
+  },
+  "devDependencies": {
+    "@ava/babel": "^2.0.0",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/register": "^7.15.3",
+    "ava": "^3.15.0",
+    "babel-cli": "^6.26.0",
+    "chalk": "^4.1.2",
+    "eslint-config-xo-react": "^0.25.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "ink-testing-library": "^2.1.0",
+    "xo": "^0.39.1"
+  }
+}
